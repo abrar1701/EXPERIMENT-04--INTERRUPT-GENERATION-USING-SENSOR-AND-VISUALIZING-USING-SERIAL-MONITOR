@@ -125,14 +125,60 @@ The diagram below shows how the GPIO pins are connected to the 16 interrupt line
  
 
 ## STM 32 CUBE PROGRAM :
+```c
+#include "main.h"
+#include "stdio.h"
 
+UART_HandleTypeDef huart2;
+
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+static void MX_USART2_UART_Init(void);
+
+#if defined(_GNUC_)
+#define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
+#endif
+
+int main(void)
+{
+  HAL_Init();
+
+  SystemClock_Config();
+
+  MX_GPIO_Init();
+  MX_USART2_UART_Init();
+
+  while (1)
+  {
+
+  }
+}
+
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	if(HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_4) == 1)
+	{
+		printf("INTERRUPT GENERATED \n");
+	}
+}
+
+PUTCHAR_PROTOTYPE
+{
+	HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1, 0xFFFF);
+	return ch;
+}
+```
 
 
 ## Output screen shots of serial port utility   :
- 
+ ![Screenshot (149)](https://github.com/user-attachments/assets/5d1c8161-aeca-41ff-b220-f5b32bae7394)
+
  
  ## Circuit board :
- 
+ ![IMG_20250416_114822](https://github.com/user-attachments/assets/0248ba9d-f2a7-48dc-80f4-e186008cd9d0)
+![IMG_20250416_114823](https://github.com/user-attachments/assets/d1bcda81-06c4-4b6c-85ee-e4f950225036)
+
  
  
 ## Result :
