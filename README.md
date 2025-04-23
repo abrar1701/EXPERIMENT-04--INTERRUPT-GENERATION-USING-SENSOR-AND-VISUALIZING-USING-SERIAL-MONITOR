@@ -176,8 +176,9 @@ PUTCHAR_PROTOTYPE
 
  
  ## Circuit board :
- ![IMG_20250416_114822](https://github.com/user-attachments/assets/0248ba9d-f2a7-48dc-80f4-e186008cd9d0)
-![IMG_20250416_114823](https://github.com/user-attachments/assets/d1bcda81-06c4-4b6c-85ee-e4f950225036)
+![with object](https://github.com/user-attachments/assets/5f930f59-d846-4cad-bebf-b918530527e2)
+![without object](https://github.com/user-attachments/assets/6aed9d44-94de-4eee-8689-822fcc4c59ed)
+
 
  
  
